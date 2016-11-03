@@ -1,0 +1,83 @@
+<div class="container" style="padding-top: 20px">
+    <center>
+      <div class="form-group">
+        <img class="img-responsive" src="http://vizagbaymarathon.com/img/appolice.png" alt="" width="200">
+      </div>
+        <form role="form">
+            <div class="form-group">
+                <label for="email">SelectRoute:</label>
+                <select class="form-control" id="coprede" style="width:200px;height:60px;font-size:28px">
+                    <option value="root1">Mylavaram</option>
+                    <option value="root2">Nuzvid</option>
+                    <option value="root3">Machilipatnam</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="input-type">Account Type *:</label>
+                <div id="input-type">
+                    <label class="radio-inline">
+                        <input name="account_type" value="in" type="radio" checked />In
+                    </label>
+                    <label class="radio-inline">
+                        <input name="account_type" value="out" type="radio" />Out
+                    </label>
+
+                </div>
+            </div>
+            <div class="form-group">
+                <button type="button" class="mybtn btn btn-default" value="bike" style="height: 60px;font-size:28px" onclick='getdetails("bike")'><i class="fa fa-motorcycle fa-lg" style="color: red;float:left" aria-hidden="true"></i>&nbspBike</button>
+            </div>
+            <div class="form-group">
+                <button type="button" class="mybtn btn btn-default" value="car" style="height: 60px;font-size:28px"onclick="getdetails('car')"><i class="fa fa-car fa-lg" style="color: red;float:left" aria-hidden="true"></i>&nbspCar/Jeep</button>
+            </div>
+            <div class="form-group">
+                <button type="button" class="mybtn btn btn-default" value="minibus" style="height: 60px;font-size:28px"onclick="getdetails('minibus')">Mini Bus/Van</button>
+            </div>
+            <div class="form-group">
+                <button type="button" class="mybtn btn btn-default" value="bus" style="height: 60px;font-size:28px"onclick="getdetails('bus')"><i class="fa fa-bus fa-lg" style="color: red;float:left" aria-hidden="true"></i>&nbspBus</button>
+            </div>
+            <div class="form-group">
+                <button type="button" class="mybtn btn btn-default" value="truck" style="height: 60px;font-size:28px"onclick="getdetails('truck')"><i class="fa fa-truck fa-lg" style="color: red;float:left" aria-hidden="true"></i>&nbspTruck</button>
+            </div>
+        </form>
+    </center>
+
+</div>
+
+<!--
+<div class="container">
+    <h1>Vehicle Registration</h1>
+    <div class="dropdown" id="route">
+        <button class="mybtn btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+            Routes
+            <span class="caret"></span>
+        </button>
+        <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+            <li><a href="#" data-value="root1">root1</a></li>
+            <li><a href="#" data-value="root2">root2</a></li>
+            <li><a href="#" data-value="root3">root3</a></li>
+            <li><a href="#" data-value="root4">root4</a></li>
+        </ul>
+        <form id="js-inOutStatus">
+            <input type="radio" name="In" value=true checked> In &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+            <input type="radio" name="In" value=false> Out
+        </form>
+    </div>
+    <br/>
+    <p>
+        <button type="button" class="mybtn btn btn-default" value="bike" onclick='getdetails("bike")'>Bike</button>
+    </p>
+    <p>
+        <button type="button" class="mybtn btn btn-default" value="car" onclick="getdetails('car')">Car</button>
+        <br>
+    </p>
+    <p>
+        <button type="button" class="mybtn btn btn-default" value="minibus" onclick="getdetails('minibus')">Mini Bus</button>
+    </p>
+    <p>
+        <button type="button" class="mybtn btn btn-default" value="bus" onclick="getdetails('bus')">Bus</button>
+    </p>
+    <p>
+        <button type="button" class="mybtn btn btn-default" value="truck" onclick="getdetails('truck')">Truck</button>
+    </p>
+</div> -->

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>vehicle registration</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css">
+    <script src="/jquery-3.1.0.min.js"></script>
+
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script> -->
+    <script src="/js/bootstrap.min.js"></script>
+    <style>
+        .mybtn {
+            width: 200px;
+        }
+
+        div ul {
+            margin-left: 50px;
+        }
+
+        div .dropdown {
+            margin-left: 50px;
+        }
+
+        div p {
+            margin-left: 50px;
+        }
+    </style>
+</head>
+
+<body>
+
+    {{{body}}}
+    <script>
+        // $(document).ready(function(){
+        //     $("button").click(function(){
+        var route;
+        $(".dropdown-menu li a").click(function() {
+            $(this).parents(".dropdown").find('.btn').html($(this).text() + ' <span class="caret"></span>');
+            $(this).parents(".dropdown").find('.btn').val($(this).data('value'));
+            var route = $(this).data('value');
+
+        });
+        $('#myTab a:last').tab('show');
+
+        function getdetails(value) {
+
+            var data = {};
+            data.name = value;
+            data.route = $('#coprede :selected').val();
+            data.status = $("input[name=account_type]:checked").val();
+
+            $.ajax({
+                url: "/get/data",
+                method: "POST",
+                data: data,
+                success: function(result) {
+                    console.log(result);
+                }
+            });
+        }
+    </script>
+</body>
+
+</html>
